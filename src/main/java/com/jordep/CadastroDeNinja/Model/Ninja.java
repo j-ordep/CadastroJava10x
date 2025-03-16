@@ -47,3 +47,5 @@ public class Ninja {
         this.tecnica = tecnica;
     }
 }
+
+
