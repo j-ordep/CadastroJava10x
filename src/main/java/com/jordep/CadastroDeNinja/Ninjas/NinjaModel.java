@@ -32,5 +32,4 @@ public class NinjaModel {
     @ManyToOne
     @JoinColumn(name = "missoes_id") // fk
     private MissoesModel missoes;
-
 }
