@@ -1,4 +1,4 @@
-package com.jordep.CadastroDeNinja.Ninjas;
+package com.jordep.CadastroDeNinja.Ninjas.Model;
 
 
 import com.jordep.CadastroDeNinja.Missoes.MissoesModel;
@@ -6,8 +6,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 
 @Entity
