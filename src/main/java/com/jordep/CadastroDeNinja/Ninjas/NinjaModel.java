@@ -1,4 +1,4 @@
-package com.jordep.CadastroDeNinja.Ninjas.Model;
+package com.jordep.CadastroDeNinja.Ninjas;
 
 
 import com.jordep.CadastroDeNinja.Missoes.MissoesModel;

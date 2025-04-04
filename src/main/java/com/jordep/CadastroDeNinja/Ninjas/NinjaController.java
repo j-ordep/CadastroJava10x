@@ -2,6 +2,7 @@ package com.jordep.CadastroDeNinja.Ninjas;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -16,8 +17,8 @@ public class NinjaController {
 
     // Adiconar ninja - (CREATE)
     @PostMapping("/criar")
-    public String criarNinja() {
-        return "Ninja Criado";
+    public NinjaModel criarNinja(@RequestBody NinjaModel ninja) {
+        return ninjaService.criarNinja(ninja);
     }
 
     // Mostrar todos os Ninjas - (READ)
@@ -32,18 +33,16 @@ public class NinjaController {
         return ninjaService.listarNinjarPorId(id);
     }
 
-
-
     // Alterar dados do Ninja - (UPDATE)
-    @PutMapping("/alterarNinja")
-    public String alterarNinja(){
-        return "atualizando ninja";
+    @PutMapping("/alterar/{id}")
+    public NinjaModel alterarNinja(@PathVariable Long id, @RequestBody NinjaModel ninja){
+        return ninjaService.alterarNinja(id, ninja);
     }
 
     // Deletar Ninja - (DELETE)
-    @DeleteMapping("/deletarNinja")
-    public String deletarNinja() {
-        return "deletado";
+    @DeleteMapping("/deletar/{id}")
+    public void deletarNinja(@PathVariable Long id) {
+        ninjaService.deletarPorId(id);
     }
 
 }

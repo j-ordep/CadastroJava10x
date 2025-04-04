@@ -1,7 +1,7 @@
 package com.jordep.CadastroDeNinja.Missoes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.jordep.CadastroDeNinja.Ninjas.Model.NinjaModel;
+import com.jordep.CadastroDeNinja.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
