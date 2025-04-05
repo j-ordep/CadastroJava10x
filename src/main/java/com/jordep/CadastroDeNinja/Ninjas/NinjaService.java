@@ -9,13 +9,17 @@ import java.util.Optional;
 public class NinjaService {
 
     private NinjaRepository ninjaRepository;
+    private NinjaMapper ninjaMapper;
 
-    public NinjaService(NinjaRepository ninjaRepository) {
+    public NinjaService(NinjaRepository ninjaRepository, NinjaMapper ninjaMapper) {
         this.ninjaRepository = ninjaRepository;
+        this.ninjaMapper = ninjaMapper;
     }
 
-    public NinjaModel criarNinja(NinjaModel ninja) {
-        return ninjaRepository.save(ninja);
+    public NinjaDTO criarNinja(NinjaDTO ninjaDTO) {
+       NinjaModel ninjaModel = ninjaMapper.map(ninjaDTO);
+       ninjaModel = ninjaRepository.save(ninjaModel);
+       return ninjaMapper.map(ninjaModel);
     }
 
     public List<NinjaModel> listarNinjas() {
@@ -29,7 +33,7 @@ public class NinjaService {
 
     public NinjaModel alterarNinja(Long id, NinjaModel ninjaAtualizado) {
         if (ninjaRepository.existsById(id)) {
-            ninjaAtualizado.setId(id);
+            ninjaAtualizado.setId(id); // atualiza o id para esse novo obj, logo o antigo ninja que estava ai foi jogado fora
             return ninjaRepository.save(ninjaAtualizado);
         }
         return null;

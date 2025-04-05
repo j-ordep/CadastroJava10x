@@ -17,7 +17,7 @@ public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column(name = "nome")
     private String nome;
@@ -29,11 +29,15 @@ public class NinjaModel {
     private String email;
 
     @Column(name = "idade")
-    private String idade;
+    private int idade;
 
 
     // muitos ninjas para uma missão
     @ManyToOne
     @JoinColumn(name = "missoes_id") // fk
     private MissoesModel missoes;
+
+    @Column(name = "rank")
+    private String rank;
+
 }
