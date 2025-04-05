@@ -1,4 +1,4 @@
 package com.jordep.CadastroDeNinja.Ninjas;
 
-public class NinjaDTO {
+public class NinjaMapper {
 }

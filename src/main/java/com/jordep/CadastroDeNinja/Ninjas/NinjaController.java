@@ -33,7 +33,7 @@ public class NinjaController {
         return ninjaService.listarNinjarPorId(id);
     }
 
-    // Alterar dados do Ninja - (UPDATE)
+    // Alterar TODOS dados do Ninja - (UPDATE)
     @PutMapping("/alterar/{id}")
     public NinjaModel alterarNinja(@PathVariable Long id, @RequestBody NinjaModel ninja){
         return ninjaService.alterarNinja(id, ninja);
