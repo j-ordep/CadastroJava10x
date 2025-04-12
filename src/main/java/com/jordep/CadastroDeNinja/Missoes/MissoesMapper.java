@@ -1,5 +1,11 @@
 package com.jordep.CadastroDeNinja.Missoes;
 
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Component
 public class MissoesMapper {
 
     public MissoesModel map(MissoesDTO missoesDTO) {
@@ -19,5 +25,6 @@ public class MissoesMapper {
         missoesDTO.setNinjaModels(missoesModel.getNinjaModels());
         return missoesDTO;
     }
+
 
 }
