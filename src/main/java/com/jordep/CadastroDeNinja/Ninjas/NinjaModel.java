@@ -29,11 +29,15 @@ public class NinjaModel {
     private String email;
 
     @Column(name = "idade")
-    private String idade;
+    private int idade;
 
 
     // muitos ninjas para uma missão
     @ManyToOne
     @JoinColumn(name = "missoes_id") // fk
     private MissoesModel missoes;
+
+    @Column(name = "rank")
+    private String rank;
+
 }
