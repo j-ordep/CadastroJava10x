@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class NinjaDTO {
 
-    private long id;
+    private Long id;
     private String nome;
     private String imgUrl;
     private String email;

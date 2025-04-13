@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Entity
 @Table(name = "tb_cadastro")
 @Data
@@ -34,7 +33,7 @@ public class NinjaModel {
 
     // muitos ninjas para uma missão
     @ManyToOne
-    @JoinColumn(name = "missoes_id") // fk
+    @JoinColumn(name = "missoes_id")
     private MissoesModel missoes;
 
     @Column(name = "rank")
