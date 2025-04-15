@@ -1,19 +1,17 @@
 package com.jordep.CadastroDeNinja.Ninjas;
 
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.support.ResourceTransactionManager;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/ninjas")
 public class NinjaController {
 
-    private NinjaService ninjaService;
+    final private NinjaService ninjaService;
 
     public NinjaController(NinjaService ninjaService, ResourceTransactionManager resourceTransactionManager) {
         this.ninjaService = ninjaService;

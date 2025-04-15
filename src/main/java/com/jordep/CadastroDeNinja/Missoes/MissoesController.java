@@ -1,6 +1,5 @@
 package com.jordep.CadastroDeNinja.Missoes;
 
-import org.springframework.data.repository.config.RepositoryNameSpaceHandler;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,9 +11,7 @@ import java.util.Optional;
 @RequestMapping("/missoes")
 public class MissoesController {
 
-    // TODO adicinar o ResponseEntity
-
-    private MissoesService missoesService;
+    final private MissoesService missoesService;
 
     public MissoesController(MissoesService missoesService) {
         this.missoesService = missoesService;
