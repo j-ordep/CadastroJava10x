@@ -1,6 +1,5 @@
 package com.jordep.CadastroDeNinja.Ninjas;
 
-import com.jordep.CadastroDeNinja.Missoes.MissoesMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -50,5 +49,4 @@ public class NinjaService {
     public void deletarPorId(Long id) {
         ninjaRepository.deleteById(id);
     }
-
 }
